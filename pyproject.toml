@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "naira-words"
+version = "0.1.0"
+description = "Format Naira amounts and spell them out in words"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+keywords = ["naira", "nigeria", "currency", "amount-in-words", "cheque"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/xacking/naira-words"
+Issues = "https://github.com/xacking/naira-words/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/naira_words"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
